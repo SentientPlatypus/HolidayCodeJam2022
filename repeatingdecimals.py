@@ -1,10 +1,14 @@
 def repeatingdecimals(input:float) ->str:
     stringInput = str(input)
-    stringInput = stringInput[2:]
+    stringList = stringInput.split(".")
 
-    power = 10 ** len(stringInput)
-    denom = str(power - 1)
-    num = stringInput
-    return num + "/" + denom
+    integerPart = int(stringList[0])
 
-print(repeatingdecimals(.98))
+    power = 10 ** len(stringList[1])
+    denom = power - 1
+
+    num = int(stringList[1]) + (integerPart * denom)
+
+    return str(num) + "/" + str(denom)
+
+print(repeatingdecimals(2.98))
