@@ -11,4 +11,4 @@ def repeatingdecimals(input:float) ->str:
 
     return str(num) + "/" + str(denom)
 
-print(repeatingdecimals(2.98))
+print(repeatingdecimals(3.768))
