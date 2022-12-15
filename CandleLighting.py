@@ -2,6 +2,7 @@ def candleLighting(days:int) -> list[int]:
     if days == 1:
         return [10, 10, 10, 10, 10, 10, 10, 10, 10]
     else:
+        ##recursion yay
         candles = candleLighting(days - 1)
 
         ## if the day is greater than 10, iterate up to index 9
